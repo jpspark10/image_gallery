@@ -68,3 +68,5 @@
 - «Управление списком» — открыть диалоговое окно, в котором можно просмотреть список изображений, добавить и удалить.
 
 - «Выход» — закрыть приложение.
+
+## [image_gallery1.0 build](https://drive.google.com/file/d/1VKsJw4_u1HokwDN7-qgR6YNKymhRMyAJ/view?usp=sharing)
