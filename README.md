@@ -69,4 +69,5 @@
 
 - «Выход» — закрыть приложение.
 
-## [Image Gallery 1.0 Build](https://drive.google.com/file/d/1VKsJw4_u1HokwDN7-qgR6YNKymhRMyAJ/view?usp=sharing)
+## Готовый билд приложения
+**[Image Gallery 1.0 Build](https://drive.google.com/file/d/1VKsJw4_u1HokwDN7-qgR6YNKymhRMyAJ/view?usp=sharing)**
