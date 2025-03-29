@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>ImageManager</class>
+ <widget class="QDialog" name="ImageManager">
+  <property name="windowTitle">
+   <string>Управление списком изображений</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <!-- Список изображений -->
+   <item>
+    <widget class="QListWidget" name="listImages"/>
+   </item>
+   <!-- Кнопки: Добавить, Удалить, Закрыть -->
+   <item>
+    <layout class="QHBoxLayout" name="horizontalLayoutBtns">
+     <item>
+      <widget class="QPushButton" name="btnAdd">
+       <property name="text">
+        <string>Добавить</string>
+       </property>
+       <property name="minimumSize">
+        <size>
+         <width>100</width>
+         <height>30</height>
+        </size>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="btnRemove">
+       <property name="text">
+        <string>Удалить</string>
+       </property>
+       <property name="minimumSize">
+        <size>
+         <width>100</width>
+         <height>30</height>
+        </size>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="btnClose">
+       <property name="text">
+        <string>Закрыть</string>
+       </property>
+       <property name="minimumSize">
+        <size>
+         <width>100</width>
+         <height>30</height>
+        </size>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

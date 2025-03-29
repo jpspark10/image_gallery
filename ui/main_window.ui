@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Галерея изображений</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <!-- Фиксированная надпись, не изменяет высоту -->
+    <item>
+     <widget class="QLabel" name="labelWelcome">
+      <property name="text">
+       <string>Добро пожаловать в галерею изображений!</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+      <property name="minimumHeight">
+       <number>25</number>
+      </property>
+     </widget>
+    </item>
+
+    <!-- Метка для изображения -->
+    <item>
+     <widget class="QLabel" name="labelImage">
+      <property name="text">
+       <string>Здесь будет отображаться изображение</string>
+      </property>
+      <property name="scaledContents">
+       <bool>false</bool>
+      </property>
+      <property name="minimumSize">
+       <size>
+        <width>400</width>
+        <height>300</height>
+       </size>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+    </item>
+
+    <!-- Фиксированная панель масштабирования -->
+    <item>
+     <widget class="QWidget" name="zoomPanel">
+      <property name="minimumHeight">
+       <number>40</number>
+      </property>
+      <property name="maximumHeight">
+       <number>40</number>
+      </property>
+      <layout class="QHBoxLayout" name="horizontalLayoutZoom">
+       <item>
+        <spacer name="horizontalSpacerLeft">
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>200</width>
+           <height>20</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+       <item>
+        <widget class="QPushButton" name="btnZoomOut">
+         <property name="text">
+          <string>Отдалить</string>
+         </property>
+         <property name="minimumSize">
+          <size>
+           <width>80</width>
+           <height>30</height>
+          </size>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="btnZoomIn">
+         <property name="text">
+          <string>Приблизить</string>
+         </property>
+         <property name="minimumSize">
+          <size>
+           <width>80</width>
+           <height>30</height>
+          </size>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <spacer name="horizontalSpacerRight">
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>200</width>
+           <height>20</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+      </layout>
+     </widget>
+    </item>
+
+    <!-- Надпись для ползунка поворота -->
+    <item>
+     <widget class="QLabel" name="labelRotate">
+      <property name="text">
+       <string>Поворот (°):</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+      <property name="minimumHeight">
+       <number>20</number>
+      </property>
+     </widget>
+    </item>
+
+    <!-- Ползунок для поворота -->
+    <item>
+     <layout class="QHBoxLayout" name="horizontalLayoutRotate">
+      <item>
+       <widget class="QSlider" name="sliderRotate">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="minimum">
+         <number>-180</number>
+        </property>
+        <property name="maximum">
+         <number>180</number>
+        </property>
+        <property name="value">
+         <number>0</number>
+        </property>
+        <property name="tickPosition">
+         <enum>QSlider::TicksBelow</enum>
+        </property>
+        <property name="tickInterval">
+         <number>30</number>
+        </property>
+        <property name="minimumWidth">
+         <number>300</number>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+
+    <!-- Панель навигации -->
+    <item>
+     <layout class="QHBoxLayout" name="horizontalLayoutNav">
+      <item>
+       <widget class="QPushButton" name="btnPrev">
+        <property name="text">
+         <string>Назад</string>
+        </property>
+        <property name="minimumSize">
+         <size>
+          <width>80</width>
+          <height>30</height>
+         </size>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="btnDelete">
+        <property name="text">
+         <string>Удалить</string>
+        </property>
+        <property name="minimumSize">
+         <size>
+          <width>80</width>
+          <height>30</height>
+         </size>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="btnNext">
+        <property name="text">
+         <string>Вперёд</string>
+        </property>
+        <property name="minimumSize">
+         <size>
+          <width>80</width>
+          <height>30</height>
+         </size>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+   </layout>
+  </widget>
+
+  <!-- Меню -->
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>800</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuFile">
+    <property name="title">
+     <string>Файл</string>
+    </property>
+    <addaction name="actionOpen"/>
+    <addaction name="actionExit"/>
+    <addaction name="actionManage"/>
+   </widget>
+   <addaction name="menuFile"/>
+  </widget>
+
+  <widget class="QStatusBar" name="statusbar"/>
+
+  <action name="actionOpen">
+   <property name="text">
+    <string>Открыть изображение</string>
+   </property>
+  </action>
+  <action name="actionExit">
+   <property name="text">
+    <string>Выход</string>
+   </property>
+  </action>
+  <action name="actionManage">
+   <property name="text">
+    <string>Управление списком</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
